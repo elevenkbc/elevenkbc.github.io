@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>T分數換算排名</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-gradient-primary">
+
+  <div class="container">
+
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+
+      <div class="col-xl-10 col-lg-12 col-md-9">
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+          <div class="card-body p-0">
+		  
+            <!-- Nested Row within Card Body -->
+            <div class="row">
+              <!--<div class="col-lg-6 d-none d-lg-block bg-login-image"></div>-->
+              <div class="col-lg-6">
+                <div class="p-5">
+					<!--自己改-->
+					<div class="text-center">
+						<h1 class="h4 text-gray-900 mb-4">T 分數排名換算器</h1>
+						<h1 class="h4 text-gray-900 mb-4" id = "Tformula" ><b>T = 10*Z + 70</b></h1>
+						
+						<div class="form-group">
+						<b>T分數:</b><input type="text" class="form-control form-control-user" id="t_score" placeholder="請輸入您的T分數(0~100)">
+						</div>
+						
+						
+						<div class="form-group">
+						<b>考試總人數:</b><input type="text" class="form-control form-control-user" id="p_num" placeholder="請輸入考試的總人數">
+						</div>
+						
+						<div class="form-group">
+						<h1 class="h4 text-gray-900 mb-4" id = "rank"><br></h1>
+						</div>
+						
+						<a href="#" onclick="tScoreToRank()" class="btn btn-success btn-icon-split btn-lg">
+						<span class="icon text-white-60">
+						<i class="fas fa-check"></i>
+						</span>
+						<span class="text">計算</span>
+						</a>
+						
+						<div class="form-group">
+						<h1 class="h6 text-gray-900 mb-4"><br></h1>
+						</div>
+						<!--
+						<button type="button" class="btn btn-light btn-sm" data-toggle="collapse" data-target="#moreSetting">
+						更多設定
+						</button>
+
+						<div id="moreSetting" class="collapse in">
+							<br>
+							<h1 class="h4 text-gray-900 mb-4"><b>T = a*Z + b</b></h1>
+							<div class="form-group">
+								<input type="text" class="form-control form-control-user" id="a" placeholder="請輸入 a">
+								<input type="text" class="form-control form-control-user" id="b" placeholder="請輸入 b">
+							</div>
+							<a href="#" onclick="update_ab()" class="btn btn-secondary btn-icon-split btn-sm">
+							<span class="text">更新a與b</span>
+							</a>
+						</div>
+						-->
+					</div>					
+				
+				<p> <em> elevenkbc@gmail.com </em> latest version: 2019/6/25</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- 計算 t 分數的轉排名的 javascript-->
+  <script src="js/t-score.js"></script>
+  
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+</body>
+
+</html>
