@@ -10,14 +10,9 @@
 
   <title>T分數換算排名</title>
 
-  <!-- Custom fonts for this template-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link
-    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-    rel="stylesheet">
-
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
 
 </head>
 
@@ -45,20 +40,14 @@
                         placeholder="請輸入您的T分數(0~100)">
                     </div>
 
-
                     <div class="form-group">
                       <b>考試總人數:</b><input type="text" class="form-control form-control-user" id="p_num"
                         placeholder="請輸入考試的總人數">
                     </div>
-
-                    <div class="form-group">
-                      <h4 class="h4 text-gray-900 mb-4 text-success" id="rank"></h4>
-                    </div>
-
-                    <a href="#" onclick="tScoreToRank()" class="btn btn-success btn-icon-split btn-lg">
-                      <span class="icon text-white-60">
-                        <i class="fas fa-check"></i>
-                      </span>
+                    <h4 id="rank" class="h4 text-gray-900 mb-4 text-success"></h4>
+                    
+                    
+                    <a id='compute' href="#" onclick="tScoreToRank()" class="btn btn-success btn-lg">
                       <span class="text">計算</span>
                     </a>
 
@@ -67,12 +56,12 @@
                     </div>
                   </div>
 
-                  <p> <em> elevenkbc@gmail.com </em> latest version: 2024/6/23</p>
+                  <p> latest update 2024/6/30</p>
                 </div>
               </div>
               <div class="d-none d-md-block col-lg-6">
-                <canvas id="t_score_cdf"  height="300"></canvas>
-                <h3 class="h4 text-gray-900 mb-4 text-center">Z分配累積分布函數</h3>
+                <canvas id="t_score_cdf" height="300"></canvas>
+                <h3 class="h4 text-gray-900 mb-4 text-center">T分數機率分配</h3>
               </div>
             </div>
           </div>
@@ -84,22 +73,17 @@
 
   </div>
 
-  <!-- 計算 t 分數的轉排名的 javascript-->
-  <script src="js/t-score.js" ></script>
+
 
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Custom scripts for all pages-->
+  <script src="vendor/chart.js/Chart.js"></script>
   <script src="js/sb-admin-2.min.js"></script>
-  <!-- Page level plugins -->
-  <script src="vendor/chart.js/Chart.min.js"></script>
-  <!-- Page level custom scripts -->
-  <script src="js/show_t_score_cdf.js"></script>
+  <!-- 計算 t 分數的轉排名的 javascript-->
+  <script src="js/t-score.js"></script>
+
 </body>
 
 </html>
