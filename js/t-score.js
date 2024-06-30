@@ -147,7 +147,7 @@ function DrawCDF(t_score, pr) {
 				if (0.01 <= pr) {
 					const z = (t_score - mean) / stdDev;
 					ctx.fillText("你的t分數:" + t_score, xPosition, yPosition); // Adjusted y position to place text above the curve
-					ctx.fillText("贏過" + toDecimal(pr) * 100 + "%的人", xPosition, yPosition + 20); // Adjusted y position to place text above the curve
+					ctx.fillText("贏過" + toDecimal(toDecimal(pr) * 100) + "%的人", xPosition, yPosition + 20); // Adjusted y position to place text above the curve
 				}
 			}
 
